@@ -8,14 +8,14 @@ void chetnie()
     int array[10];                  
     for (int i = 0; i < 10; i++)
         array[i] = rand() % 20;         
-    cout << "Èñõîäíûé ìàññèâ: " << endl;
+    cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: " << endl;
     for (int i = 0; i < 10; i++)
         cout << array[i] << ' ';
     cout << endl;
 
     for (int i = 0; i < 10; i++)         
         if (array[i] % 2 == 0) array[i] = 0;
-    cout << "Ìàññèâ ïîñëå çàìåíû: " << endl;
+    cout << "ÐœÐ°ÑÑÐ¸Ð² Ð¿Ð¾ÑÐ»Ðµ Ð·Ð°Ð¼ÐµÐ½Ñ‹: " << endl;
     for (int i = 0; i < 10; i++)
         cout << array[i] << ' ';
     cout << endl;
@@ -26,38 +26,38 @@ void simvol()
 {
     string a, b;                                     
     int m;                                             
-    cout << endl << "Ââåäèòå îäèí ñèìâîë:" << endl;
+    cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ð´Ð¸Ð½ ÑÐ¸Ð¼Ð²Ð¾Ð»: " << endl;
     do {
         cin >> a;
         if (a.size() > 1) 
            {                                               
-               cout << "Íåêîððåêòíûé ââîä! Ââåäèòå îäèí ñèìâîë:" << endl;
+               cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´! Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ð´Ð¸Ð½ ÑÐ¸Ð¼Ð²Ð¾Ð»:" << endl;
                a.clear();
             }
           else break;
           } while (true);
 
-    cout << "Ââåäèòå ñòðîêó:" << endl;
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ:" << endl;
     do {
         cin >> b;
         if (b.size() < 2) 
             {                                              
-                cout << "Îøèáêà! Ââåäèòå ñòðîêó:" << endl;
+                cout << "ÐžÑˆÐ¸Ð±ÐºÐ°! Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ: " << endl;
                 b.clear();
             }
         else break;
            } while (true);
 
     m = b.find(a);                                 
-    if (m < 0) cout << "Ñèìâîëà â ñòðîêå íåò" << endl;
-    else cout << "Ñèìâîë çàíèìàåò " << m + 1 << " ïîçèöèþ" << endl;
+    if (m < 0) cout << "Ð¡Ð¸Ð¼Ð²Ð¾Ð»Ð° Ð² ÑÑ‚Ñ€Ð¾ÐºÐµ Ð½ÐµÑ‚" << endl;
+    else cout << "Ð¡Ð¸Ð¼Ð²Ð¾Ð» Ð·Ð°Ð½Ð¸Ð¼Ð°ÐµÑ‚ " << m + 1 << " Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ" << endl;
 }
 
 void opredelel()                                 
 {
     int a[3][3];                                            
     int opred;                                               
-    cout << endl << "Çàïîëíèòå ìàòðèöó 3 íà 3 öåëûìè ÷èñëàìè" << endl;        
+    cout << endl << "Ð—Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñƒ 3 Ð½Ð° 3 Ñ†ÐµÐ»Ñ‹Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð°Ð¼Ð¸" << endl;        
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
             cin >> a[i][j];
@@ -69,7 +69,7 @@ void opredelel()
     }
     
     opred= a[0][0] * a[1][1] * a[2][2] + a[2][0] * a[0][1] * a[1][2] + a[1][0] * a[2][1] * a[0][2] - a[2][0] * a[1][1] * a[0][2] - a[0][0] * a[2][1] * a[1][2] - a[1][0] * a[0][1] * a[2][2];
-    cout << endl << "Îïðåäåëèòåëü ìàòðèöû = " << opred << endl;
+    cout << endl << "ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚ÐµÐ»ÑŒ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ = " << opred << endl;
 }
 
 int main()
